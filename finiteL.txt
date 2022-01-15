@@ -1,0 +1,33 @@
+Suppose we define a restricted version of the Java programming language in which
+variable names must satisfy all of the following conditions:
+ A variable name can only use Roman letters (i.e., a, b, . . . , z, A, B, . . . , Z) or
+Arabic numerals (i.e., 0, 1, 2, . . . , 9); i.e., underscore is not allowed.
+ A variable name must start with a Roman letter: a, b, . . . , z, A, B, . . . , Z
+ The length of a variable name must be no greater than 8.
+ A variable name cannot be a keyword (e.g., if). The set of keywords is finite.
+Let L be the set of all valid variable names in our restricted version of Java.
+
+
+(a) Let L0 be the set of strings satisfying the first 3 conditions above; i.e., we do
+not require the last condition. How many strings are in L0? You can just give a
+general formula for your answer; you do not need to give a single number.
+
+_ _ _ _ _ _ _ _
+(26+26) pos0
+(26+26+10) pos1-7
+strings can be len 1-8
+formula:
+sum=0
+for i in range(0,8):
+	sum=sum+((26+26)*pow(26+26+10,i))
+or nicely:
+7
+sum((26+26)*pow(26+26+10,i))
+i=0
+
+(b) Prove that L is finite, where L is the set of strings satisfying all four conditions
+
+Assume L if infinite.
+L0 has a general forumla which is finite (L0<infinity). The final condition will remove, h, words from L0.
+Thus we can calculate L using L=L0-h. Thus making L<infinity. Creating a contradiction in our original assumption
+proving L to be finite.

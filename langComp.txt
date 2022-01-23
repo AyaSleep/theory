@@ -1,0 +1,7 @@
+ Is the class of languages recognized by NFAs closed under complement?
+ 
+ The class of regular languages is closed under complementation for DFAs.
+ We know that every NFA N, has an equivalent DFA, M.
+ So, for every language recognized by N, the equivalent DFA, M, can recognize it too.
+ Because we know that if a DFA can recognize a language it can also recognize it's complement,
+ thus the class of regular languages that are recognized by NFA's is closed under complement!
